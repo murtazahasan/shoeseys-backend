@@ -130,7 +130,6 @@ export const searchProducts = async (req, res) => {
     const searchRegex = new RegExp(query, "i");
     const products = await Product.find({
       $or: [{ name: searchRegex }, { description: searchRegex }],
-      category: { $nin: ["best-selling", "featured-product"] },
     }).select("name description imageUrl");
 
     console.log("Products found:", products.length);
