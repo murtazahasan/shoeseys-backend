@@ -144,7 +144,7 @@ export const searchProducts = async (req, res) => {
 
 // Searching functionality for admin page
 export const getAllProducts = async (req, res) => {
-  console.log("Request received at product.controllers: getAllProducts");
+  console.log("Request received at product.controllers: getAllProducts for admin pannel");
   const { page = 1, limit = 10, search = "", category = "" } = req.query;
 
   try {
